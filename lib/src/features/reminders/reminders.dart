@@ -1,0 +1,1 @@
+export './view/reminders_screen.dart';
