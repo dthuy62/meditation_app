@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:meditation_app/src/common/widgets/responsive_builder.dart';
+import 'package:meditation_app/src/common/widgets/widgets.dart';
+
 import 'package:meditation_app/src/features/choose_topics/widgets/widgets.dart';
 
 

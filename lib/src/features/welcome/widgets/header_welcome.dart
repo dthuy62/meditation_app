@@ -3,7 +3,6 @@ import 'package:meditation_app/src/common/extensions/context_extension.dart';
 import 'package:meditation_app/src/common/helpers/helpers.dart';
 import 'package:meditation_app/src/common/theme/theme.dart';
 
-
 class GetStartedHeader extends StatelessWidget {
   const GetStartedHeader({
     Key? key,
@@ -14,10 +13,14 @@ class GetStartedHeader extends StatelessWidget {
     return Column(
       children: [
         Flexible(
-            flex: 2,
-            fit: FlexFit.tight,
-            child: ImageHelper.loadFromAsset(AssetHelper.icLogo,
-                fit: BoxFit.none, alignment: const Alignment(0.0, -0.8))),
+          flex: 2,
+          fit: FlexFit.tight,
+          child: ImageHelper.loadFromAsset(
+            AssetHelper.icLogoWhite,
+            fit: BoxFit.none,
+            alignment: const Alignment(0.0, -0.8),
+          ),
+        ),
         Flexible(
           flex: 1,
           fit: FlexFit.tight,

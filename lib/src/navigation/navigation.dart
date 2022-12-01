@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meditation_app/src/features/choose_topics/view/choose_topics_screen.dart';
 import 'package:meditation_app/src/features/login/view/login_screen.dart';
+import 'package:meditation_app/src/features/login/view/sign_up_and_sign_in.dart';
 import 'package:meditation_app/src/features/reminders/view/reminders_screen.dart';
 import 'package:meditation_app/src/features/welcome/welcome.dart';
 
@@ -11,6 +12,7 @@ abstract class Routes {
   static const login = 'login';
   static const topics = 'topics';
   static const reminders = 'reminders';
+  static const signUpAndSignIn = 'signupandsignin';
 }
 
 abstract class RouteGenerator {
@@ -18,6 +20,8 @@ abstract class RouteGenerator {
     switch (settings.name) {
       case Routes.welcome:
         return AppPageRoute((context) => const WelcomeScreen(), settings);
+      case Routes.signUpAndSignIn:
+        return AppPageRoute((context) => const SignUpAndSignIn(), settings);
       case Routes.login:
         return AppPageRoute((context) => const LoginScreen(), settings);
       case Routes.topics:

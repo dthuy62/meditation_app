@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:meditation_app/src/common/constants/constants.dart';
 import 'package:meditation_app/src/common/extensions/context_extension.dart';
 import 'package:meditation_app/src/common/theme/theme.dart';
-
-import 'package:meditation_app/src/common/widgets/responsive_builder.dart';
+import 'package:meditation_app/src/common/widgets/widgets.dart';
 import 'package:meditation_app/src/features/welcome/widgets/widgets.dart';
+import 'package:meditation_app/src/navigation/navigation.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -19,14 +20,17 @@ class WelcomeScreen extends StatelessWidget {
                   children: [
                     const GetStartedBackground(),
                     const FractionallySizedBox(
-                        heightFactor: 0.35, child: GetStartedHeader()),
+                        heightFactor: 0.35, child: GetStartedHeader(),
+                    ),
                     Align(
-                      alignment: const Alignment(0.0, 0.8),
-                      child: ButtonWelcome(
+                      alignment: const Alignment(NumberConstant.verticalAxis, NumberConstant.horizontalAxis),
+                      child: AppButton(
+                        textData: TextConstant.getStarted,
+                        routeName: Routes.signUpAndSignIn,
                         fixedSize: MaterialStateProperty.all(
-                            Size(size.width * 0.85, size.height * 0.065)),
+                            Size(size.width * NumberConstant.sizeWidth, size.height * NumberConstant.sizeHeight)),
                         textStyle: MaterialStateProperty.all(
-                          TextStyle(fontSize: size.height * 0.015)
+                          TextStyle(fontSize: size.height * NumberConstant.fontSizeHeight)
                         ),
                       ),
                     )
@@ -45,8 +49,10 @@ class WelcomeScreen extends StatelessWidget {
                       children: [
                         const GetStartedBackground(),
                         Align(
-                          alignment: const Alignment(0.0, 0.8),
-                          child: ButtonWelcome(
+                          alignment: const Alignment(NumberConstant.verticalAxis, NumberConstant.horizontalAxis),
+                          child: AppButton(
+                            textData: TextConstant.getStarted,
+                            routeName: Routes.signUpAndSignIn,
                             fixedSize: MaterialStateProperty.all(
                                 Size(size.width * 0.4, size.height * 0.065)),
                             textStyle: MaterialStateProperty.all(
